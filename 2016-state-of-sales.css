@@ -1,0 +1,591 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css);
+
+/* ----- HACKS TO THE MAINFRAME ----- */
+#content_editor {
+    padding: 0 !important;
+}
+
+/*header,*/
+/*.document-header,*/
+/*.panels-container,*/
+/*.panel ,*/
+/*.panel-select,*/
+/*.doc-next-steps {*/
+/*    display: none !important;*/
+/*}*/
+
+/*section {*/
+/*    top: 0 !important;*/
+/*    right: 0 !important;*/
+/*}*/
+
+.container-fluid {
+    padding: 0 30px !important;
+}
+
+.no-pad {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* ----- DOCUMENT DEFAULTS ----- */
+img {
+    width: 100%;
+    max-width: 700px;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+h2.takeaway {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px !important;
+}
+
+.bullet li {
+    padding-bottom: 1em;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.white-text {
+    color: white !important;
+    text-shadow: 3px 3px 1px rgba(0,0,0,0.85);
+}
+
+.fancy-a {
+    color: #df6d2c !important;
+    font-weight: bold !important;
+    border: 2px solid transparent;
+    transition: border 300ms ease-in-out;
+    text-decoration: none !important;
+}
+
+.fancy-a:hover {
+    border-bottom: 2px solid #df6d2c;
+}
+
+.b-b {
+    border-bottom: 10px solid #df6d2c;
+}
+
+.last {
+    margin-bottom: 0 !important;
+}
+
+.twitter-share {
+    position: relative;
+    height: 20px;
+    padding: 1px 8px 1px 6px;
+    font-weight: 500 !important;
+    color: #fff !important;
+    cursor: pointer;
+    background-color: #1b95e0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    font-style: initial !important;
+}
+
+.twitter-share:hover {
+    background-color: #0c7abf;
+}
+
+.fancy-number {
+    border: 3px solid #ccc;
+    border-radius: 100%;
+    padding: 0.1em .5em;
+    background: #ffffff;
+    color: #df6d2c;
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.question-title .col-sm-11,
+.question-title .col-sm-10 {
+    padding-left: 2.0em;
+}
+
+.question {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2em;
+}
+
+.question-title h2 {
+    line-height: 1em !important;
+}
+
+.question-title:first-of-type .col-xs-12 h2 {
+    padding-right: 3em;
+    line-height: 1em;
+}
+
+.lead {
+    font-size: 1.3em !important;
+    line-height: 1.3em !important;
+    margin-bottom: 1.3em !important;
+}
+
+/* ----- COVER PAGE ----- */
+.cover-page-logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.cover-page-logo {
+    max-width: 150px !important;
+}
+
+.cover-page-logo-tag {
+    border-left: 1px solid #686868;
+    margin-left: 10px;
+    margin-bottom: -3px;
+    padding-left: 10px !important;
+    padding-top: 15px;
+}
+
+.cover-page-logo-tag span {
+    font-size: 1.75em;
+    font-weight: 100;
+}
+
+.title-container {
+    height: 220px;
+}
+
+.cover-date {
+    transform: rotate(-90deg);
+    display: inline-block;
+    font-size: 5.75em !important;
+    line-height: 0 !important;
+    position: absolute;
+    color: #df6d2c !important;
+    left: -.35em;
+    top: 1.1em;
+}
+
+.cover-title {
+    position: absolute;
+    z-index: 2;
+    left: .9em;
+    top: -10px;
+    font-size: 8em !important;
+    line-height: 0.85em !important;
+    color: #686868 !important;
+}
+
+.cover-symbol {
+    max-width: 175px !important;
+    position: absolute;
+    right: 60px;
+    z-index: 1;
+}
+
+.cover-overlay-text {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    right: 30px;
+    font-size: 1.75em !important;
+    font-weight: 100 !important;
+    line-height: 1.2em !important;
+}
+
+/* ----- END COVER PAGE ----- */
+
+/* ----- LETTERHEAD ----- */
+.letter-footer {
+    position: relative;
+    background-color: #E6E7E8;
+    margin: 20px -30px 0;
+    padding: 15px 115px 15px 30px;
+    text-align: right;
+}
+
+.letter-footer img {
+    max-width: 70px !important;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+}
+/* ----- END LETTERHEAD ----- */
+
+/* ----- BARF CHARTS ----- */
+.chart-container {
+    background-color: #f0f0f0;
+    border: 1px solid #cccccc;
+    padding: 1em 1.5em;
+    text-align: center;
+}
+
+.chart-plot-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    overflow: hidden;
+    height: 150px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.chart-bar {
+    background-color: #686868;
+    width: 75px;
+}
+
+.chart-bar-highlight {
+    background-color: #df6d2c !important;
+}
+
+.chart-data-point {
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 11px);
+    font-size: 1.2em !important;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.chart-source {
+    margin-top: 5px !important;
+    font-style: italic;
+    font-size: .85em  !important;
+    margin-bottom: 2.5em !important;
+}
+
+.chart-source > span {
+    float: right;
+}
+/* ----- END BARF CHARTS ----- */
+
+/* ----- PIE CHARTS ----- */
+.pie {
+    margin: 0 1em;
+    display: block !important;
+    height: 175px;
+    float: left;
+}
+
+.pie-chart {
+    padding-left: 100px !important;
+}
+
+.pie-chart img {
+    border-radius: 100%;
+}
+
+.pie-table {
+    padding-left: 100px !important;
+}
+
+.pie-row {
+    margin-bottom: 10px;
+}
+
+.pie-tip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.75);
+    color: white;
+    padding: .5em;
+    font-weight: bold;
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.85);
+}
+
+.flex-pie-table {
+    margin-left: 4em;
+}
+
+.caret {
+    position: absolute !important;
+    bottom: -8px !important;
+    left: calc(50% - 10px) !important;
+    color: rgba(0,0,0,0.65) !important;
+    border-top: 8px dashed;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+.chart-identifier {
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+.chart-label {
+    text-align: left;
+    padding-left: 34px;
+}
+
+table, td {
+    background-color: transparent !important;
+    border: 0 !important;
+}
+
+td:nth-child(2n) {
+    margin-left: 10px;
+}
+
+/* ----- END PIE CHARTS ----- */
+
+/* ----- NUMBER CARD ----- */
+/*.number-card-container {*/
+/*    box-shadow: 1px 1px 10px rgba(0,0,0,0.15);*/
+/*    border: 1px solid #ccc;*/
+/*}*/
+
+.number-card-container p {
+    margin-bottom: 0 !important;
+}
+
+.number-card-top {
+    margin: 0 1em 0;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+    border: 1px solid #ccc;
+}
+
+.number-card-bottom {
+    background-color: #f0f0f0;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+    border: 1px solid #ccc;
+    border-top: 0; 
+    padding: 1em;
+    margin: 0 1em;
+}
+
+.number-card-title {
+    font-size: 1.5em !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+}
+
+/* ----- END NUMBER CARD ----- */
+
+
+/* ----- HOVER-TIP ----- */
+h3.hover {
+    font-size: 5em !important;
+    font-weight: 900 !important;
+    color: white !important;
+    margin-bottom: 0 !important;
+    line-height: 176px !important;
+    text-shadow: 3px 3px 3px rgba(0,0,0,.35);
+}
+
+.hover-tip {
+  display: inline;
+  position: relative;
+  transition: all 300ms ease-in-out;
+}
+
+.hover-tip:hover:after {
+    background: #333;
+    background: rgba(0,0,0,0.6);
+    top: -176px;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    content: attr(title);
+    padding: 55px 15px 15px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 265px;
+    transition: all 300ms ease-in-out;
+    line-height: 1.1em;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hover-tip div {
+    width: 100%;
+    text-align: center;
+    box-shadow: inset 0px 0px 15px rgba(0,0,0,0.25);
+}
+
+.mobile-tip {
+    display: none;
+}
+
+
+/* ----- END HOVER-TIP ----- */
+
+
+
+
+/* ----- MEDIA QUERIES ----- */
+@media (max-width: 480px) {
+
+/* ----- HACKS TO THE MAINFRAME ----- */
+.container-fluid {
+    padding: 0 25px !important;
+}
+/* ----- END HACKS ----- */
+
+/* ----- UTILITIES ----- */
+.remove {
+    display: none;
+}
+
+.line-break {
+    display: block;
+}
+
+.question-title .col-xs-12 {
+    
+}
+
+.question-title .col-xs-12 h2 {
+    padding-top: 1em;
+    line-height: 1em !important;
+}
+
+.question-title:first-child .col-xs-12 h2 {
+    padding: 1em 0 0;
+}
+
+.half {
+    margin: 5em 0;
+}
+/* ----- END UTILITIES ----- */
+
+
+/* ----- COVER PAGE ----- */
+.cover-page-logo {
+    max-width: 125px !important;
+}
+
+.cover-page-logo-tag {
+    font-size: 1em !important;
+}
+
+.title-container {
+    height: 145px;
+}
+
+.cover-date {
+    font-size: 3.5em !important;
+}
+
+.cover-title {
+    font-size: 4.75em !important;
+    top: -5px;
+}
+
+.cover-symbol {
+    max-width: 100px !important;
+    right: 5px;
+    top: -5px;
+}
+
+.cover-overlay-text {
+    left: 25px;
+    right: 25px;
+    font-size: 1.35em !important;
+}
+/* ----- END COVER PAGE ----- */
+
+/* ----- LETTERHEAD ----- */
+.letter-footer {
+    padding-left: 30px !important;
+    padding-right: 105px !important;
+}
+
+.letter-footer img {
+    max-width: 80px !important;
+    right: 15px;
+}
+/* ----- END LETTERHEAD ----- */
+
+/* ----- BARF CHARTS ----- */
+.chart-bar {
+    width: 40px;
+}
+
+.flex-pie {
+    flex-direction: column;
+    height: 270px !important;
+}
+
+.flex-pie-table {
+    margin-left: 0 !important;
+    margin-top: 1em;
+}
+
+/* ----- END BARF CHARTS ----- */
+
+/* ----- HOVER-TIP ----- */
+.hover-tip:hover:after {
+    display: none;
+}
+
+.mobile-tip {
+    display: block;
+}
+/* ----- END HOVER-TIP ----- */
+
+/* ----- NUMBER-CARD ----- */
+.number-card-container {
+    margin-bottom: 2em;
+}
+.number-card-container:last-of-type {
+    margin-bottom: 0;
+}
+/* ----- END NUMBER-CARD ----- */
+}
+
+/* ----- ANIMATIONS ----- */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes rotateIn {
+  from {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: center;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.rotateIn {
+  animation-name: rotateIn;
+}
